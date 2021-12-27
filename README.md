@@ -1,8 +1,8 @@
 # Rossman Drug Store - A sales forecast 
 The objective of this project is a sales forecast for the Rossmann drugstore using machine learning
 
-![sales-prediction-social-media](https://unsplash.com/photos/hpjSkU2UYSU)
-# Business problem
+![sales-prediction-social](https://github.com/alessandra-barbosa/rossmann_sales_predict/blob/master/Img/rossmann6.png)
+# Business Problem
 Need to set a budget to renovate the store because
 the current forecast was not consistent. Greater precision and accuracy in sales forecasts was needed.
 
@@ -37,6 +37,13 @@ The method used for the project was CRISP-DM, apply as the steps below:
 **Data Filtering**: The goal of this step it to filter rows and delete columns that are not relevant for the model or are not part of the business scope.
 
 **Exploratory Data Analysis**: The goal of this step is to explore the data to find insights and better understand the impact of variables on model learning.
+- Bivariaty analysis
+![sales-prediction-EDA](https://github.com/alessandra-barbosa/rossmann_sales_predict/blob/master/Img/rossmann.png)
+- Bivariaty analysis
+![sales-prediction-EDA](https://github.com/alessandra-barbosa/rossmann_sales_predict/blob/master/Img/rossmann1.png)
+- Multivariaty analysis
+![sales-prediction-EDA](https://github.com/alessandra-barbosa/rossmann_sales_predict/blob/master/Img/rossmann3.png)
+
 
 **Data Preparation**: The goal of this step is to prepare the data prepare data for application of the machine learning model.  
 
@@ -52,27 +59,7 @@ The method used for the project was CRISP-DM, apply as the steps below:
 
 **Telegram Bot**: The goal of this step is to create a bot on the telegram app, that make possible to consult the forecast at any time.
 
-# Top Three Data Insigths
-**H1**: Stores with larger assortments should sell more.
-
-**FALSE**: Stores with a larger assortment sell LESS.
-
-![image](https://user-images.githubusercontent.com/85244180/135637281-5f0d6160-e245-49e8-8f3d-f1dbccba12ea.png)
-
-**H9**: Stores should sell more over the years.
-
-**FALSE**: Stores sell less over the years.
-
-![image](https://user-images.githubusercontent.com/85244180/135638046-9dd85666-fa4e-4b6f-8caa-7549a5903de3.png)
-
- **H11**: Stores should sell more after the 10th of each month.
- 
-**TRUE**: Stores sell more after the 10th of each month.
-
-![image](https://user-images.githubusercontent.com/85244180/135639149-69db891d-ba66-465f-b732-54f58909d312.png)
-
 # Tested Machine Learning Models 
-
 - Average Model
 - Linear Regression Model
 - Linear Regression Regularized Model (Lasso)
@@ -80,13 +67,12 @@ The method used for the project was CRISP-DM, apply as the steps below:
 - XGBoost Regressor
 
 # Machine Learning Models Performance
-
-![image](https://user-images.githubusercontent.com/85244180/135642546-f625a607-a1c8-45bd-b4f5-b2432fff6915.png)
+![image](https://github.com/alessandra-barbosa/rossmann_sales_predict/blob/master/Img/rossmann_tab1.png)
 
 
 # Machine Learnig Performance after Hyperparemeter Fine Tuning
 
-![image](https://user-images.githubusercontent.com/85244180/135654921-1fa910a1-a495-4036-bd7b-54d2569461d3.png)
+![image](https://github.com/alessandra-barbosa/rossmann_sales_predict/blob/master/Img/rossmann_tab2.png)
 
 Although the Random Forest Regressor Model presented better performance, this model usually requires a large amount of space on the server in deploy step, generating a significant cost increase for the company. Therefore, it was choosen the XGBoost Regressor Model, which after the hyperparameter fine tuning presented similar performance and requires less space on the server, generating a lower cost for the company.
 
@@ -96,7 +82,7 @@ In addition to overall sales prediction, it was also calculated the sales predic
 
 **Model with XGBoost Regression**
 
-![image](https://user-images.githubusercontent.com/85244180/135664880-e12bf17c-49ae-4eed-a285-32d51e0508d8.png)
+![image](https://github.com/alessandra-barbosa/rossmann_sales_predict/blob/master/Img/rossmann_tab3.png)
 
 # How to access the prediction
 ## Pre-requirement
@@ -112,11 +98,11 @@ In addition to overall sales prediction, it was also calculated the sales predic
 - Send the store number (one each time) and get the sales prediction for the next six weeks.
 - If the store number does not exist, it will get as an answer the message: "Store Not Available".
 
-![image](https://user-images.githubusercontent.com/85244180/135685816-8bb3bacf-3795-4893-966a-c2e75d8e0846.png)
+![image](https://github.com/alessandra-barbosa/rossmann_sales_predict/blob/master/Img/rossmann_bot.png)
 
 # Conclusion
 
-Considering the first CRISP-DS cycle, the final model presented a usefull performance, considering the MAPE (Mean Absolute Percentage Error) of 0.11. However, for some stores, higher MAPE values were observed, such as 0.37 and 0.52, but this is a point that could be improved in the next CRISP cycle.
+Considering the first CRISP-DS cycle, the final model presented a usefull performance, considering the MAPE (Mean Absolute Percentage Error) of 0.09. However, for some stores, higher MAPE values were observed, such as 0.24 and 0.56, but this is a point that could be improved in the next CRISP cycle.
 
 # Technologies
 - Jupyter notebook
